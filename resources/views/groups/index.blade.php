@@ -6,5 +6,6 @@
             <a href="{{ route('groups.edit', ['group' => $group]) }}">Edit</a>
             {{-- <a href="{{ route('checkin-group', ['group' => $group]) }}">Check-in</a> --}}
         </div>
-    @endforeach
+        @endforeach
+        <a href="{{ route('groups.create') }}">Create a group</a>
 </x-app-layout>
