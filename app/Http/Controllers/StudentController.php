@@ -39,7 +39,7 @@ class StudentController extends Controller
     {
         $validated = $request->validate(['name' => 'required', 'group_id' => 'required|exists:groups,id']);
         Student::create($validated);
-        return redirect(route('students.index'), 201);
+        return redirect(route('groups.show', ['group' => $validated['group_id']]), 201);
     }
 
     /**
